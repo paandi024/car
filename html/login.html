@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../BOOTStrap/bootstrap_manual.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color:rgb(14, 14, 14) ;
+            background-image: url("../images/wp4390472-black-scorpio-car-wallpapers.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 30%;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(58, 58, 58, 0.619);
+        }
+        .container:hover {
+            box-shadow:rgba(193, 181, 187, 0.956) 5px 0px 30px 10px;
+
+        }
+        button {
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            border: none;
+            padding: 10px;
+            
+        }
+        input{
+            border-style: none;
+            padding: 22px;
+        }
+        input:focus{
+            border: 2px solid rgb(249, 6, 152);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <header><center>
+            <h1 class="text-light">Login</h1>
+        </center>
+        </header>
+        <section>
+            
+            <i class="fas fa-user"></i>
+            <label for="" class="text-light">Username</label><br>
+            <input class="input-group rounded-4 py-2 my-2" type="text" name="username" id="username"  placeholder="  Type your username" required><br>
+            
+            <i class="fas fa-lock"></i>
+            <label for="" class="text-light">Password</label><br>
+            <input class="input-group rounded-4 py-2 my-2" type="password" name="password" id="password" placeholder="  Type your password" required><br>
+            <a href="" style="text-decoration: none; color: rgb(237, 231, 231);">forgot password?</a><br>
+            <button class="btn btn-light mt-1 rounded-4" id="submit"  onclick="formValidation()" type="button">login</button>
+        </section>
+
+        <section>
+         <center>   
+        <div class="option">
+            <br>
+            <br><br>
+            <label class="text-light" for="">----------------or login with ---------------</label><br><br>
+    
+          </div>
+          <div>
+        <button class="btn "><i class="fa-brands fa-google"></i></button>
+        <button class="btn"><i class="fa-brands fa-apple"></i></button><br><br><br>
+        <label class="text-light" for="">Don't have an account?<span style="color: rgb(48, 47, 47);"><a style="text-decoration: none; color: rgb(164, 218, 227);" href="./register.html">Register Here</a></span></label><br><br>
+
+         </div>
+        </center>
+        </section>
+
+    </div>
+    <script>
+        function formValidation() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == "") {
+                alert("Please enter your username");
+                return false;
+            }
+            if (password == "") {
+                alert("Please enter your password");
+                return false;
+            }
+            if (username.length < 5) {
+                alert("Username must be at least 5 characters long");
+                return false;
+            }
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long");
+                return false;
+            }
+            alert("Login successful");
+            window.location.href = "./scarpio.html";
+        }
+    </script>
+</body>
+</html>
