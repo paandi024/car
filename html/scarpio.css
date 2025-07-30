@@ -121,16 +121,21 @@ section p:hover{
     
 }
 button{
-    background-color: rgb(139, 138, 138);
+    width: 40%;
+    height: 5vh;
+    border-radius: 4rem;
+    background-color: rgb(193, 191, 191);
     color: rgb(9, 9, 16);
-    border-style: none;
-    border-radius: 6px;
-}
+    border: none;
+    font-size: 1.2em;
 
+}
 button:hover{
-    background-color: rgb(71, 71, 71);
-    color: bisque;
-    
+    background-color: transparent;
+    color: rgb(251, 249, 249);
+    border-color: 4 px solid rgb(251, 249, 249);
+    /* box-shadow: 10px 10px 10px rgba(249, 247, 247, 0.1); */
+    transition: all 0.3s ease;
 }
 #contact{
     backdrop-filter: blur(15px);
@@ -141,46 +146,61 @@ button:hover{
     
 }
 
-@media screen and (max-width: 400px) {
-    
-        
-        #nav{
-            flex-direction: column;
-            align-items: center;
-            color: rgb(11, 11, 11);
-        }
-        #box {
-            width: 80%;
-            height: 200%;
-            margin: 20px;
-    background-color: #211111ca;
-    color: rgb(130, 130, 129);
-    border-radius: 35px;
-    text-align: center;
-    padding: 4%;
-            
-        }
-        #box img{
-            width: 90%;
-            border-radius: 15px;
-        }
-        #main{
-            flex-direction: column;
-            align-items: center;
-        }
-        .nav-links{
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        .nav-links a{
-            margin: 10px 0;
-            font-size: 1.5em;
-        }
-        .nav-btn{
-            display: block;
-            margin-top: 10px;
-        }
-        
+
+@media screen and (max-width: 420px) {
+     .nav-links {
+        display: none;
+
         
     }
+    .nav-btn {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-btn i {
+        font-size: 2em;
+        color: rgb(255, 255, 255);
+    }
+    .home{
+        background: url("../images/home-phone-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    .about{
+        background: url("../images/about-phone-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .about .about-content {
+        width: 90%;
+        padding: 10px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    body{
+        background: url(../images/cart-phone-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    #box {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+    }
+    .about .about-content {
+        width: 80%;
+        padding: 10px;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-links a {
+        font-size: 1em;
+    }
+    
+}
